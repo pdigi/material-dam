@@ -7,11 +7,13 @@ import ThemeProvider from './theme';
 // components
 import { StyledChart } from './components/chart';
 import ScrollToTop from './components/scroll-to-top';
+import { AuthProvider } from './contexts/JWTContext';
 
 // ----------------------------------------------------------------------
 
 export default function App() {
   return (
+    <AuthProvider>
     <HelmetProvider>
       <BrowserRouter>
         <ThemeProvider>
@@ -20,6 +22,8 @@ export default function App() {
           <Router />
         </ThemeProvider>
       </BrowserRouter>
-    </HelmetProvider>
+    </HelmetProvider>     
+    </AuthProvider>
+ 
   );
 }
