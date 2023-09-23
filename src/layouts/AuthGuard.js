@@ -25,7 +25,7 @@ export default function AuthGuard({ children }) {
   }
 
   if (isAuthenticated) { // faking logged in
-//   if (!isAuthenticated) { // not logged in
+ // if (!isAuthenticated) { // not logged in
     if (pathname !== requestedLocation) {
       setRequestedLocation(pathname);
     }
